@@ -1,0 +1,416 @@
+{
+  "name": "Financial Research Agent",
+  "nodes": [
+    {
+      "parameters": {
+        "content": "## Build your own research agent !\n\n**Launch your first AI financial agent—a chatbot that uses tools to fetch live info, send report on discord **\n\n### To get started:\n1.  **Connect Gemini** (see red sticky note below)\n2.  Click the **🗨 Open chat** button and try asking a question such as \n\n$nvda is it a good time to invest now for long term? \n\nor \n\ngold etf short term prediction\n\n@adihere\n\nDisclaimer:\nThis application uses generative artificial intelligence (AI) to provide financial insights and analyses. The content generated is for informational purposes only and should not be considered as professional financial advice or a recommendation to buy or sell any securities. Users are strongly encouraged to conduct their own independent research and consult with qualified financial advisors before making any investment decisions.\n\n\n\n",
+        "height": 460,
+        "width": 392
+      },
+      "id": "b9fce588-e3bc-4dac-a241-ec0770cd4ca1",
+      "cid": "Ikx1Y2FzIFBleXJpbiI",
+      "name": "Introduction Note",
+      "type": "n8n-nodes-base.stickyNote",
+      "creator": "Lucas Peyrin",
+      "position": [
+        144,
+        224
+      ],
+      "typeVersion": 1,
+      "notes": "© 2025 Aditya Vadaganadam"
+    },
+    {
+      "parameters": {
+        "content": "💡 Later, activate this workflow and share the public chat URL to let others talk to your AI Agent!",
+        "height": 252,
+        "width": 300,
+        "color": 7
+      },
+      "id": "dc105616-84ff-4a1d-b43b-f382fe76d45b",
+      "cid": "Ikx1Y2FzIFBleXJpbiI",
+      "name": "Sticky Note12",
+      "type": "n8n-nodes-base.stickyNote",
+      "creator": "Lucas Peyrin",
+      "position": [
+        848,
+        336
+      ],
+      "typeVersion": 1,
+      "notes": "© 2025 Aditya Vadaganadam"
+    },
+    {
+      "parameters": {
+        "content": "Your AI agent can:\n1. **Receive** messages from the chat\n2. **Select** the right tools (e.g., weather, news, email)\n3. **Respond** with live, helpful answers\n\n\n**Open the AI agent node** and edit the **System Message** to adjust your agent’s thinking, behavior, and replies.\n\n\n\n\n\n\n\n\n\n\n",
+        "height": 348,
+        "width": 396,
+        "color": 7
+      },
+      "id": "dd01905f-9a57-499e-afec-3d05de975326",
+      "cid": "Ikx1Y2FzIFBleXJpbiI",
+      "name": "Sticky Note13",
+      "type": "n8n-nodes-base.stickyNote",
+      "creator": "Lucas Peyrin",
+      "position": [
+        1232,
+        240
+      ],
+      "typeVersion": 1,
+      "notes": "© 2025 Aditya Vadaganadam"
+    },
+    {
+      "parameters": {
+        "content": "\n\n\n\n\n\n\n\n\n\n\n\n\n\nThis node helps your agent remember the last few messages to stay on topic.",
+        "height": 260,
+        "width": 308,
+        "color": 7
+      },
+      "id": "04b8eef2-55c1-41e8-8cd6-0d0d07ad509b",
+      "cid": "Ikx1Y2FzIFBleXJpbiI",
+      "name": "Sticky Note15",
+      "type": "n8n-nodes-base.stickyNote",
+      "creator": "Lucas Peyrin",
+      "position": [
+        1232,
+        672
+      ],
+      "typeVersion": 1,
+      "notes": "© 2025 Aditya Vadaganadam"
+    },
+    {
+      "parameters": {
+        "public": true,
+        "initialMessages": "Hi there! 👋",
+        "options": {
+          "inputPlaceholder": "Type your message here...",
+          "showWelcomeScreen": false,
+          "subtitle": "This is for demo purposes. Try me out !",
+          "title": "Your first AI Agent 🚀",
+          "responseMode": "lastNode"
+        }
+      },
+      "id": "58f64f3a-bd07-4608-9678-a90028bd2afa",
+      "cid": "Ikx1Y2FzIFBleXJpbiI",
+      "name": "Example Chat",
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "creator": "Lucas Peyrin",
+      "position": [
+        944,
+        432
+      ],
+      "webhookId": "b4ef6734-aff6-4ae9-a0f6-e61a3c74fef6",
+      "typeVersion": 1.1
+    },
+    {
+      "parameters": {
+        "contextWindowLength": 30
+      },
+      "id": "895bfe99-f5bb-4602-8d70-4561da94509f",
+      "cid": "Ikx1Y2FzIFBleXJpbiI",
+      "name": "Conversation Memory",
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "creator": "Lucas Peyrin",
+      "position": [
+        1344,
+        720
+      ],
+      "typeVersion": 1.3
+    },
+    {
+      "parameters": {
+        "modelName": "models/gemini-2.5-flash-lite",
+        "options": {
+          "maxOutputTokens": 2048,
+          "temperature": 0
+        }
+      },
+      "id": "9240b26f-2b4e-4b3d-809d-e9502b7534e3",
+      "cid": "Ikx1Y2FzIFBleXJpbiI",
+      "name": "Connect Gemini",
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "creator": "Lucas Peyrin",
+      "position": [
+        944,
+        720
+      ],
+      "typeVersion": 1,
+      "notesInFlow": true,
+      "credentials": {
+        "googlePalmApi": {
+          "id": "add here",
+          "name": "Google AI Studio Key"
+        }
+      },
+      "notes": "adihere"
+    },
+    {
+      "parameters": {
+        "content": "\n\n\n\n\n\n\n\n\n\n\n\n1. [In Google AI Studio](https://aistudio.google.com/app/apikey) click **“Create API key in new project”** and copy it.\n\n2. Open the ```Connect Gemini``` node:\n   * **Select Credential → Create New**\n   * Paste into **API Key** and **Save**\n",
+        "height": 316,
+        "width": 294,
+        "color": 3
+      },
+      "id": "18653fec-d263-4643-9b55-41c549013bd2",
+      "cid": "Ikx1Y2FzIFBleXJpbiI",
+      "name": "Sticky Note",
+      "type": "n8n-nodes-base.stickyNote",
+      "creator": "Lucas Peyrin",
+      "position": [
+        848,
+        672
+      ],
+      "typeVersion": 1,
+      "notes": "© 2025 Aditya Vadaganadam"
+    },
+    {
+      "parameters": {
+        "authentication": "webhook",
+        "content": "=Welcome to your AI powered financial analyst - {{ $json.$workflow.name }}\n\nYou asked -  {{ $('Example Chat').item.json.chatInput }}\n\nExecutive Summary - {{ $('agent1').item.json.output.idea }}\n\nA bit more of details {{ $json.clean }}\n\nDisclaimer:\nThis application uses generative artificial intelligence (AI) to provide financial insights and analyses. The content generated is for informational purposes only and should not be considered as professional financial advice or a recommendation to buy or sell any securities. Users are strongly encouraged to conduct their own independent research and consult with qualified financial advisors before making any investment decisions.\n\nThe information provided by this AI-powered tool is experimental and may contain errors, inaccuracies, or outdated information. We expressly disclaim any liability for losses or damages resulting from reliance on the content generated by this application. Use at your own risk.",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.discord",
+      "typeVersion": 2,
+      "position": [
+        2320,
+        416
+      ],
+      "id": "447ffa71-7658-45c0-987c-cd8c7e405319",
+      "name": "Discord",
+      "webhookId": "b492f2ae-6b11-4c74-a95c-c772548746d2",
+      "notesInFlow": false,
+      "credentials": {
+        "discordWebhookApi": {
+          "id": "...add here...",
+          "name": "Discord Webhook account"
+        }
+      },
+      "notes": "The message is via AI agent - DYOR"
+    },
+    {
+      "parameters": {
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "=<context>\n### Input\nThe user's query is provided from the previous node:\n\"{{$json[\"query\"]}}\"\n\n### Instructions\n- Analyze the query strictly from a financial analysis perspective. \n- Provide structured insights (such as risks, revenue potential, cost implications, investment outlook, etc.).\n- Be conversational, sarcastic, and bitey, but still educational.\n- Keep the tone frank and truth-focused, not sugar-coated.  \n- Finish with a short but clear takeaway for the user.\n\n### Output\nGenerate the output in markdown format without any special characters  \n</context>"
+        }
+      },
+      "id": "5d842428-809c-4d70-a569-0bbeb6b8b02c",
+      "cid": "Ikx1Y2FzIFBleXJpbiI",
+      "name": "agent1",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "creator": "Lucas Peyrin",
+      "position": [
+        1312,
+        432
+      ],
+      "typeVersion": 2.2,
+      "executeOnce": false,
+      "alwaysOutputData": false,
+      "notes": "© 2025 Aditya Vadaganadam"
+    },
+    {
+      "parameters": {
+        "jsonSchemaExample": "{\n\t\"idea\": \"One liner title or idea\",\n\t\"analysis\": \"Analysis of the title \"\n}",
+        "autoFix": "="
+      },
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.3,
+      "position": [
+        1584,
+        656
+      ],
+      "id": "ecc83d6b-7461-4338-9efa-c2dcb5713f06",
+      "name": "Structured Output Parser"
+    },
+    {
+      "parameters": {
+        "jsCode": "let str = $input.first().json.output.analysis\n\n// Remove all special characters except letters, numbers, and spaces\nstr = str.replace(/[^a-zA-Z0-9 ]/g, '');\n\nreturn [{ json: { clean: str } }];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1760,
+        448
+      ],
+      "id": "a399d139-921c-4eca-ac90-5a887d63094b",
+      "name": "Code"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "955d43bb-46f9-4189-9124-6d22b83c1834",
+              "name": "clean",
+              "value": "={{ $json.clean }}",
+              "type": "string"
+            },
+            {
+              "id": "8b267b8c-76ba-48cc-96f3-01abcd1f15df",
+              "name": "output.idea",
+              "value": "={{ $('agent1').item.json.output.idea }}",
+              "type": "string"
+            },
+            {
+              "id": "c88a0009-7c7f-4ffa-b8c8-3c63937ece3b",
+              "name": "chatInput",
+              "value": "={{ $('Example Chat').item.json.chatInput }}",
+              "type": "string"
+            },
+            {
+              "id": "948d9bd5-d0dd-48af-871c-0258bfa33d03",
+              "name": "$workflow.name",
+              "value": "={{ $workflow.name }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1984,
+        528
+      ],
+      "id": "e9de7a75-6a60-42df-ba68-29f69ff941ee",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "content": "Get a webhook for a channel on Discord \n\nOfficial Discord Docs on creating and managing webhooks:\nhttps://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks\n\nn8n Docs on Discord credentials including webhook setup:\nhttps://docs.n8n.io/integrations/builtin/credentials/discord/",
+        "height": 192,
+        "color": 4
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        2288,
+        560
+      ],
+      "typeVersion": 1,
+      "id": "f2467245-5f4b-4b3d-a243-64e3225b5e5b",
+      "name": "Sticky Note1"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Example Chat": {
+      "main": [
+        [
+          {
+            "node": "agent1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Connect Gemini": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "agent1",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Conversation Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "agent1",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "agent1": {
+      "main": [
+        [
+          {
+            "node": "Code",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Structured Output Parser": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "agent1",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "Discord",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "795a39d5-9438-40e8-a13b-272b6c0c6a29",
+  "meta": {
+    "templateId": "6270",
+    "templateCredsSetupCompleted": true,
+    "instanceId": "dc6502f6723706f89d6fafb74f8b1c9e62669bc4f6e7235a97b3670f95fa0dfd"
+  },
+  "id": "wxi8Lvy0a773JUDJ",
+  "tags": [
+    {
+      "createdAt": "2025-08-24T21:42:42.394Z",
+      "updatedAt": "2025-08-24T21:42:42.394Z",
+      "id": "7P7402AT8fl1UgKy",
+      "name": "discord"
+    },
+    {
+      "createdAt": "2025-08-24T21:42:35.574Z",
+      "updatedAt": "2025-08-24T21:42:35.574Z",
+      "id": "TiwQjTi7BRE6rBjx",
+      "name": "gemini"
+    },
+    {
+      "createdAt": "2025-08-24T21:42:51.754Z",
+      "updatedAt": "2025-08-24T21:42:51.754Z",
+      "id": "YXKQkUYk2OAFiNjz",
+      "name": "agent"
+    },
+    {
+      "createdAt": "2025-08-24T21:42:48.732Z",
+      "updatedAt": "2025-08-24T21:42:48.732Z",
+      "id": "izuNj2v182Li85ja",
+      "name": "financial"
+    },
+    {
+      "createdAt": "2025-08-24T21:42:39.803Z",
+      "updatedAt": "2025-08-24T21:42:39.803Z",
+      "id": "luHmOkpwxgGHf47m",
+      "name": "ai"
+    }
+  ]
+}
