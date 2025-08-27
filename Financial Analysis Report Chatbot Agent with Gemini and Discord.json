@@ -30,13 +30,13 @@
       "cid": "Ikx1Y2FzIFBleXJpbiI",
       "name": "Sticky Note12",
       "type": "n8n-nodes-base.stickyNote",
-      "creator": "Lucas Peyrin",
+      "creator": "Aditya Vadaganadam",
       "position": [
         848,
         336
       ],
       "typeVersion": 1,
-      "notes": "© 2025 Lucas Peyrin"
+      "notes": "© 2025 Aditya Vadaganadam"
     },
     {
       "parameters": {
@@ -49,13 +49,13 @@
       "cid": "Ikx1Y2FzIFBleXJpbiI",
       "name": "Sticky Note13",
       "type": "n8n-nodes-base.stickyNote",
-      "creator": "Lucas Peyrin",
+      "creator": "Aditya Vadaganadam",
       "position": [
         1232,
         112
       ],
       "typeVersion": 1,
-      "notes": "© 2025 Lucas Peyrin"
+      "notes": "© 2025 Aditya Vadaganadam"
     },
     {
       "parameters": {
@@ -65,7 +65,7 @@
           "inputPlaceholder": "Type your message here...",
           "showWelcomeScreen": false,
           "subtitle": "This is for demo purposes. Try me out !",
-          "title": "Your first AI Agent 🚀",
+          "title": "Your Financial AI Agent 🚀",
           "responseMode": "lastNode"
         }
       },
@@ -73,7 +73,7 @@
       "cid": "Ikx1Y2FzIFBleXJpbiI",
       "name": "Example Chat",
       "type": "@n8n/n8n-nodes-langchain.chatTrigger",
-      "creator": "Lucas Peyrin",
+      "creator": "Aditya Vadaganadam",
       "position": [
         944,
         432
@@ -89,7 +89,7 @@
       "cid": "Ikx1Y2FzIFBleXJpbiI",
       "name": "Conversation Memory",
       "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
-      "creator": "Lucas Peyrin",
+      "creator": "Aditya Vadaganadam",
       "position": [
         1344,
         720
@@ -108,7 +108,7 @@
       "cid": "Ikx1Y2FzIFBleXJpbiI",
       "name": "Connect Gemini",
       "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
-      "creator": "Lucas Peyrin",
+      "creator": "Aditya Vadaganadam",
       "position": [
         944,
         720
@@ -134,13 +134,13 @@
       "cid": "Ikx1Y2FzIFBleXJpbiI",
       "name": "Sticky Note",
       "type": "n8n-nodes-base.stickyNote",
-      "creator": "Lucas Peyrin",
+      "creator": "Aditya Vadaganadam",
       "position": [
         848,
         672
       ],
       "typeVersion": 1,
-      "notes": "© 2025 Lucas Peyrin"
+      "notes": "© 2025 Aditya Vadaganadam"
     },
     {
       "parameters": {
@@ -177,7 +177,7 @@
       "cid": "Ikx1Y2FzIFBleXJpbiI",
       "name": "agent1",
       "type": "@n8n/n8n-nodes-langchain.agent",
-      "creator": "Lucas Peyrin",
+      "creator": "Aditya Vadaganadam",
       "position": [
         1312,
         432
@@ -185,7 +185,7 @@
       "typeVersion": 2.2,
       "executeOnce": false,
       "alwaysOutputData": false,
-      "notes": "© 2025 Lucas Peyrin"
+      "notes": "© 2025 Aditya Vadaganadam"
     },
     {
       "parameters": {
@@ -311,13 +311,13 @@
       "cid": "Ikx1Y2FzIFBleXJpbiI",
       "name": "Sticky Note15",
       "type": "n8n-nodes-base.stickyNote",
-      "creator": "Lucas Peyrin",
+      "creator": "Aditya Vadaganadam",
       "position": [
         1232,
         624
       ],
       "typeVersion": 1,
-      "notes": "© 2025 Lucas Peyrin"
+      "notes": "© 2025 Aditya Vadaganadam"
     },
     {
       "parameters": {
@@ -330,13 +330,13 @@
       "cid": "Ikx1Y2FzIFBleXJpbiI",
       "name": "Sticky Note16",
       "type": "n8n-nodes-base.stickyNote",
-      "creator": "Lucas Peyrin",
+      "creator": "Aditya Vadaganadam",
       "position": [
         1520,
         624
       ],
       "typeVersion": 1,
-      "notes": "© 2025 Lucas Peyrin"
+      "notes": "© 2025 Aditya Vadaganadam"
     },
     {
       "parameters": {
@@ -349,13 +349,13 @@
       "cid": "Ikx1Y2FzIFBleXJpbiI",
       "name": "Sticky Note17",
       "type": "n8n-nodes-base.stickyNote",
-      "creator": "Lucas Peyrin",
+      "creator": "Aditya Vadaganadam",
       "position": [
         1664,
         112
       ],
       "typeVersion": 1,
-      "notes": "© 2025 Lucas Peyrin"
+      "notes": "© 2025 Aditya Vadaganadam"
     },
     {
       "parameters": {
@@ -368,13 +368,13 @@
       "cid": "Ikx1Y2FzIFBleXJpbiI",
       "name": "Sticky Note18",
       "type": "n8n-nodes-base.stickyNote",
-      "creator": "Lucas Peyrin",
+      "creator": "Aditya Vadaganadam",
       "position": [
         1920,
         624
       ],
       "typeVersion": 1,
-      "notes": "© 2025 Lucas Peyrin"
+      "notes": "© 2025 Aditya Vadaganadam"
     }
   ],
   "pinData": {},
